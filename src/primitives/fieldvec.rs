@@ -157,7 +157,7 @@ impl<F> FieldVec<F> {
         #[cfg(feature = "alloc")]
         if self.len > NO_ALLOC_MAX_LENGTH {
             self.inner_v.sort_unstable_by_key(keyfn);
-            return
+            return;
         }
         self.inner_a.sort_unstable_by_key(keyfn);
     }
